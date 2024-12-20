@@ -3,12 +3,14 @@
 set -euC
 set -o pipefail
 
+cd "$(dirname "$0")/.."
+
 org="$1"
 reviewer="$2"
 
 export GITHUB_TOKEN=$(gh auth token)
 
-multi-gitter run ./rename-mise-toml.sh \
+multi-gitter run ./mise/rename-mise-toml.sh \
   --assignees taikinoda \
 	--git-type cmd \
 	-O "$org" \
