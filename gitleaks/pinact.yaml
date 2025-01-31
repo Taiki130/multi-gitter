@@ -1,0 +1,4 @@
+files:
+  - pattern: "^\\.github/workflows/gitleaks\\.ya?ml$"
+ignore_actions:
+  - name: actions/checkout
